@@ -1,20 +1,33 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import Header from './Header/Header';
+import Banner from './Banner/Banner';
+import Button from './Button/Button';
 
-import Header from './Header/Header'
-import SubHeader from './SubHeader/SubHeader'
-import Banner from './Banner/Banner'
-import Featured from './Featured/Featured'
+import './App.css';
 
-function App() {
+const App = () => {
+
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
+
   return (
-    <>
-      <SubHeader />
+    <div className="App">
       <Header />
-      <Banner />
-      <Featured />
-    </>
-  )
-}
+      <Button text="Click Me" onClick={handleClick} />
 
-export default App
+      <div style={{ height: '2000px', paddingTop: '100px' }}>
+        <h2>Scroll down to see the header stay on top</h2>
+      </div>
+
+      <Button text="With Icon" onClick={handleClick} icon="fa fa-star" variant="orange" />
+      <Banner
+        imageKey="banner1"
+        titleText="Explore Our Properties"
+        fillerText="Luxury Homes in New York"
+      />
+    </div>
+  );
+};
+
+export default App;

@@ -1,35 +1,23 @@
+import React from 'react';
+import './Header.css';
 
-import PropTypes from 'prop-types'
-
-// import styles from './Header.module.css'
-
-function Header() {
+const Header = () => {
   return (
-    <header className="header-area header-sticky">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <nav className="main-nav">
-              <a href="index.html" className="logo">
-                <h1>Villa</h1>
-              </a>
-              <ul className="nav">
-                <li><a href="index.html" className="active">Home</a></li>
-                <li><a href="properties.html">Properties</a></li>
-                <li><a href="property-details.html">Property Details</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#"><i className="fa fa-calendar"></i> Schedule a visit</a></li>
-              </ul>
-              <a className='menu-trigger'>
-                <span>Menu</span>
-              </a>
-            </nav>
-          </div>
+    <header className="header-area">
+      <div className="main-nav">
+        <div className="logo">
+          <h1>Villa Agency</h1>
         </div>
+        <nav className="nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

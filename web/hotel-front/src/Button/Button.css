@@ -1,0 +1,36 @@
+.main-button {
+  display: inline-block;
+  background-color: #1e1e1e;
+  /* Black by default */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 30px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.main-button:hover {
+  background-color: #f35525;
+  /* Orange on hover */
+  color: #fff;
+}
+
+.main-button.orange {
+  background-color: #f35525;
+  /* Orange by default */
+}
+
+.main-button.orange:hover {
+  background-color: #1e1e1e;
+  /* Black on hover */
+}
+
+.main-button i {
+  margin-right: 10px;
+}
