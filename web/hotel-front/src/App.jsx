@@ -14,13 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Button text="Click Me" onClick={handleClick} />
 
-      <div style={{ height: '2000px', paddingTop: '100px' }}>
-        <h2>Scroll down to see the header stay on top</h2>
-      </div>
-
-      <Button text="With Icon" onClick={handleClick} icon="fa fa-star" variant="orange" />
       <Banner
         imageKey="banner1"
         titleText="Explore Our Properties"
@@ -29,5 +23,11 @@ const App = () => {
     </div>
   );
 };
+// <div style={{ height: '2000px', paddingTop: '100px' }}>
+//   <h2>Scroll down to see the header stay on top</h2>
+// </div>
+//
+// <Button text="With Icon" onClick={handleClick} icon="fa fa-star" variant="orange" />
+// <Button text="Click Me" onClick={handleClick} />
 
 export default App;
