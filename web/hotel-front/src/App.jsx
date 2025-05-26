@@ -1,33 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header/Header';
 import Banner from './Banner/Banner';
-import Button from './Button/Button';
-
+import HomePage from './pages/HomePage';
+import PropertiesPage from './pages/PropertiesPage';
+// import ContactPage from './pages/ContactPage';
 import './App.css';
 
 const App = () => {
-
-  const handleClick = () => {
-    alert('Button clicked!');
-  };
-
   return (
-    <div className="App">
-      <Header />
-
-      <Banner
-        imageKey="banner1"
-        titleText="Explore Our Properties"
-        fillerText="Luxury Homes in New York"
-      />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Banner
+                titleText="Best Deals For You"
+                fillerText="Luxury Villa in Miami"
+              />
+              <HomePage />
+            </>
+          } />
+          <Route path="/properties" element={<PropertiesPage />} />
+          <Route path="/contact" />
+        </Routes>
+      </div>
+    </Router>
   );
 };
-// <div style={{ height: '2000px', paddingTop: '100px' }}>
-//   <h2>Scroll down to see the header stay on top</h2>
-// </div>
-//
-// <Button text="With Icon" onClick={handleClick} icon="fa fa-star" variant="orange" />
-// <Button text="Click Me" onClick={handleClick} />
 
 export default App;

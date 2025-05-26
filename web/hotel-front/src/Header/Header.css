@@ -44,21 +44,13 @@
   /* Add spacing between navigation items */
 }
 
-.nav ul li {
-  padding: 0 10px;
+/* Add this to your existing Header.css */
+.nav ul li a.active {
+  color: #f35525;
 }
 
-.nav ul li a {
-  display: block;
-  padding: 0 15px;
-  font-weight: 500;
-  font-size: 15px;
-  color: #1e1e1e;
-  transition: all 0.4s ease;
-  text-transform: capitalize;
-}
-
-.nav ul li a:hover {
+/* Or if you want to style the Link component */
+.nav ul li .active {
   color: #f35525;
 }
 

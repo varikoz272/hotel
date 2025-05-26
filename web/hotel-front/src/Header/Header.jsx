@@ -1,24 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
-
-import PropertiesPage from '../PropertiesPage/PropertiesPage';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-  const handlePropertiesClick = () => {
-    return PropertiesPage
-  }
-
   return (
     <header className="header-area">
       <div className="main-nav">
         <div className="logo">
-          <h1>Villa Agency</h1>
+          <Link to="/">
+            <h1>Villa Agency</h1>
+          </Link>
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#properties" onClick={handlePropertiesClick}>Properties</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><NavLink to="/" end>Home</NavLink></li>
+            <li><NavLink to="/properties">Properties</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
         </nav>
       </div>
